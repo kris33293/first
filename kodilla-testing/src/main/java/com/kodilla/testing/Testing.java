@@ -1,2 +1,4 @@
-package com.kodilla.testing;public class Testing {
+package com.kodilla.testing;
+
+public class Testing {
 }
