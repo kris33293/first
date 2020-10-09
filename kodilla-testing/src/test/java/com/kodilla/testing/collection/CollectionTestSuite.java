@@ -9,12 +9,12 @@ import java.util.List;
 public class CollectionTestSuite {
 
     @BeforeEach
-    public void before(){
+    public void before() {
         System.out.println("Test Case: begin");
     }
 
     @AfterEach
-    public void after(){
+    public void after() {
         System.out.println("Test Case: end");
     }
 
@@ -25,36 +25,44 @@ public class CollectionTestSuite {
     void testOddNumbersExterminatorNormalList() {
         //Given
         List<Integer> numbersList = new ArrayList<>();
+        List<Integer> checkNumbersList = new ArrayList<>();
 
-        for (int i=1; i<200;i++){
+        for (int i = 1; i < 200; i++) {
             numbersList.add(i);
         }
         //When
         OddNumbersExterminator extermination = new OddNumbersExterminator();
 
-        //Then
+        for (Integer number : numbersList) {
+            if (number % 2 == 0) {
+                checkNumbersList.add(number);
+            }
+        }
+            //Then
 
-            System.out.println(extermination.exterminate(numbersList));
 
+            Assertions.assertEquals(extermination.exterminate(numbersList), checkNumbersList);
+
+        }
+
+        @DisplayName("when create empty numbersList, " +
+                "then method exterminate returns empty list"
+        )
+        @Test
+        void testOddNumbersExterminatorEmptyList() {
+            //Given
+            List<Integer> numbersList = new ArrayList<>();
+            List<Integer> checkNumbersList = new ArrayList<>();
+
+
+            //When
+            OddNumbersExterminator extermination = new OddNumbersExterminator();
+
+            //Then
+
+            Assertions.assertEquals(extermination.exterminate(numbersList), checkNumbersList);
+
+        }
     }
-
-    @DisplayName("when create empty numbersList, " +
-            "then method exterminate returns empty list"
-    )
-    @Test
-    void testOddNumbersExterminatorEmptyList() {
-        //Given
-        List<Integer> numbersList = new ArrayList<>();
-
-
-        //When
-        OddNumbersExterminator extermination = new OddNumbersExterminator();
-
-        //Then
-
-        System.out.println(extermination.exterminate(numbersList));
-
-    }
-}
 
 

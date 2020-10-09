@@ -9,7 +9,7 @@ public class OddNumbersExterminator {
     public List<Integer> afterExtermination = new ArrayList<>();
 
     public List<Integer> exterminate(List<Integer> numbersList) {
-        this.numbersList = numbersList;
+
 
         for (Integer numbers : numbersList){
             if (numbers % 2 == 0){
