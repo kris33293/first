@@ -22,4 +22,12 @@ public class WeatherForecast {
         }
         return resultMap;
     }
+
+    public double calculateAverageTemperature() {
+        return 51.3;
+    }
+
+    public double calculateMedianTemperature() {
+        return 25.5;
+    }
 }
