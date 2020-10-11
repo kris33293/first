@@ -43,7 +43,7 @@ public class ShapeCollectorTestSuite {
             // When
             shapeCollector.addFigure(circle);
             // Then
-            Assertions.assertEquals(circle, shapeCollector.getFigure(0));
+            Assertions.assertEquals(1, shapeCollector.getFiguresQuantity());
 
 
         }
@@ -57,7 +57,7 @@ public class ShapeCollectorTestSuite {
             boolean result = shapeCollector.removeFigure(circle);
             // Then
             Assertions.assertTrue(result);
-            Assertions.assertNotEquals(1, shapeCollector.getFiguresQuantity());
+            Assertions.assertEquals(0, shapeCollector.getFiguresQuantity());
 
 
         }
@@ -118,7 +118,8 @@ public class ShapeCollectorTestSuite {
             // When
             shapeCollector.addFigure(square);
             // Then
-            Assertions.assertEquals(square, shapeCollector.getFigure(0));
+            Assertions.assertEquals(1, shapeCollector.getFiguresQuantity());
+
 
 
         }
@@ -132,7 +133,8 @@ public class ShapeCollectorTestSuite {
             boolean result = shapeCollector.removeFigure(square);
             // Then
             Assertions.assertTrue(result);
-            Assertions.assertNotEquals(square, shapeCollector.getFigure(0));
+            Assertions.assertEquals(0, shapeCollector.getFiguresQuantity());
+
 
 
         }
@@ -193,7 +195,8 @@ public class ShapeCollectorTestSuite {
             // When
             shapeCollector.addFigure(triangle);
             // Then
-            Assertions.assertEquals(triangle, shapeCollector.getFigure(0));
+            Assertions.assertEquals(1, shapeCollector.getFiguresQuantity());
+
 
 
         }
@@ -207,7 +210,8 @@ public class ShapeCollectorTestSuite {
             boolean result = shapeCollector.removeFigure(triangle);
             // Then
             Assertions.assertTrue(result);
-            Assertions.assertNotEquals(triangle, shapeCollector.getFigure(0));
+            Assertions.assertEquals(0, shapeCollector.getFiguresQuantity());
+
 
 
         }
