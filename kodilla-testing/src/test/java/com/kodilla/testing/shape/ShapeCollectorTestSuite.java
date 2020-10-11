@@ -57,13 +57,13 @@ public class ShapeCollectorTestSuite {
             boolean result = shapeCollector.removeFigure(circle);
             // Then
             Assertions.assertTrue(result);
-            Assertions.assertNotEquals(circle, shapeCollector.getFigure(0));
+            Assertions.assertNotEquals(1, shapeCollector.getFiguresQuantity());
 
 
         }
 
         @Test
-        void testGetFigure(int n) {
+        void testGetFigure() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
             Circle circle = new Circle("circle", 25 );
@@ -73,6 +73,34 @@ public class ShapeCollectorTestSuite {
             retrievedShape = shapeCollector.getFigure(0);
             // Then
             Assertions.assertEquals(circle, retrievedShape);
+
+        }
+
+        @Test
+        void testGetFigureNegativeIndex() {
+            // Given
+            ShapeCollector shapeCollector = new ShapeCollector();
+            Square square = new Square("square", 25 );
+            shapeCollector.addFigure(square);
+            // When
+            Shape retrievedShape;
+            retrievedShape = shapeCollector.getFigure(-1);
+            // Then
+            Assertions.assertEquals(null, retrievedShape);
+
+        }
+
+        @Test
+        void testGetFigureOverloadedIndex() {
+            // Given
+            ShapeCollector shapeCollector = new ShapeCollector();
+            Square square = new Square("square", 25 );
+            shapeCollector.addFigure(square);
+            // When
+            Shape retrievedShape;
+            retrievedShape = shapeCollector.getFigure(7);
+            // Then
+            Assertions.assertEquals(null, retrievedShape);
 
         }
     }
@@ -110,7 +138,7 @@ public class ShapeCollectorTestSuite {
         }
 
         @Test
-        void testGetFigure(int n) {
+        void testGetFigure() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
             Square square = new Square("square", 25 );
@@ -120,6 +148,34 @@ public class ShapeCollectorTestSuite {
             retrievedShape = shapeCollector.getFigure(0);
             // Then
             Assertions.assertEquals(square, retrievedShape);
+
+        }
+
+        @Test
+        void testGetFigureNegativeIndex() {
+            // Given
+            ShapeCollector shapeCollector = new ShapeCollector();
+            Square square = new Square("square", 25 );
+            shapeCollector.addFigure(square);
+            // When
+            Shape retrievedShape;
+            retrievedShape = shapeCollector.getFigure(-1);
+            // Then
+            Assertions.assertEquals(null, retrievedShape);
+
+        }
+
+        @Test
+        void testGetFigureOverloadedIndex() {
+            // Given
+            ShapeCollector shapeCollector = new ShapeCollector();
+            Square square = new Square("square", 25 );
+            shapeCollector.addFigure(square);
+            // When
+            Shape retrievedShape;
+            retrievedShape = shapeCollector.getFigure(7);
+            // Then
+            Assertions.assertEquals(null, retrievedShape);
 
         }
     }
@@ -167,6 +223,34 @@ public class ShapeCollectorTestSuite {
             retrievedShape = shapeCollector.getFigure(0);
             // Then
             Assertions.assertEquals(triangle, retrievedShape);
+
+        }
+
+        @Test
+        void testGetFigureNegativeIndex() {
+            // Given
+            ShapeCollector shapeCollector = new ShapeCollector();
+            Square square = new Square("square", 25 );
+            shapeCollector.addFigure(square);
+            // When
+            Shape retrievedShape;
+            retrievedShape = shapeCollector.getFigure(-1);
+            // Then
+            Assertions.assertEquals(null, retrievedShape);
+
+        }
+
+        @Test
+        void testGetFigureOverloadedIndex() {
+            // Given
+            ShapeCollector shapeCollector = new ShapeCollector();
+            Square square = new Square("square", 25 );
+            shapeCollector.addFigure(square);
+            // When
+            Shape retrievedShape;
+            retrievedShape = shapeCollector.getFigure(7);
+            // Then
+            Assertions.assertEquals(null, retrievedShape);
 
         }
     }

@@ -8,7 +8,9 @@ public class ShapeCollector {
     private List<Shape> shapesList = new ArrayList<>();
 
 
-
+    public int getFiguresQuantity () {
+        return shapesList.size();
+    }
     public void addFigure(Shape shape){
 
     }
