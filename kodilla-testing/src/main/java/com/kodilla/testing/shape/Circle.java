@@ -19,4 +19,21 @@ public class Circle implements Shape {
         return field;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Circle circle = (Circle) o;
+
+        if (field != circle.field) return false;
+        return name.equals(circle.name);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name.hashCode();
+        result = 31 * result + field;
+        return result;
+    }
 }
