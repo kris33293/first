@@ -52,7 +52,7 @@ class WeatherForecastTestSuite {
 
         // Then
 
-        Assertions.assertEquals(51.3, averageTemperature);
+        Assertions.assertEquals(25.56, averageTemperature);
     }
 
     @Test
