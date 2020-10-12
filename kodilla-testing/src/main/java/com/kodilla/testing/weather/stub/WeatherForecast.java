@@ -71,11 +71,16 @@ public class WeatherForecast {
         }
 
         Collections.sort(temperaturesList);
-            mediana = temperaturesList.get(temperaturesList.size()/2);
 
+        if (temperaturesList.size() % 2 == 0 )
+        {
+            srednia = temperaturesList.get(temperaturesList.size()/2) + temperaturesList.get((temperaturesList.size()/2)-1);
+
+            mediana = srednia/2.0; //obliczamy średnią wartość dwóch elementów
+
+        }
+        else mediana = temperaturesList.get(temperaturesList.size()/2);
 
         return mediana;
-
-
     }
 }
