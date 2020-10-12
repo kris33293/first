@@ -86,7 +86,7 @@ public class ShapeCollectorTestSuite {
             Shape retrievedShape;
             retrievedShape = shapeCollector.getFigure(-1);
             // Then
-            Assertions.assertEquals(null, retrievedShape);
+            Assertions.assertNull(retrievedShape);
 
         }
 
@@ -100,7 +100,7 @@ public class ShapeCollectorTestSuite {
             Shape retrievedShape;
             retrievedShape = shapeCollector.getFigure(7);
             // Then
-            Assertions.assertEquals(null, retrievedShape);
+            Assertions.assertNull(retrievedShape);
 
         }
     }
@@ -163,7 +163,7 @@ public class ShapeCollectorTestSuite {
             Shape retrievedShape;
             retrievedShape = shapeCollector.getFigure(-1);
             // Then
-            Assertions.assertEquals(null, retrievedShape);
+            Assertions.assertNull(retrievedShape);
 
         }
 
@@ -177,7 +177,7 @@ public class ShapeCollectorTestSuite {
             Shape retrievedShape;
             retrievedShape = shapeCollector.getFigure(7);
             // Then
-            Assertions.assertEquals(null, retrievedShape);
+            Assertions.assertNull(retrievedShape);
 
         }
     }
@@ -240,7 +240,7 @@ public class ShapeCollectorTestSuite {
             Shape retrievedShape;
             retrievedShape = shapeCollector.getFigure(-1);
             // Then
-            Assertions.assertEquals(null, retrievedShape);
+            Assertions.assertNull(retrievedShape);
 
         }
 
@@ -254,7 +254,7 @@ public class ShapeCollectorTestSuite {
             Shape retrievedShape;
             retrievedShape = shapeCollector.getFigure(7);
             // Then
-            Assertions.assertEquals(null, retrievedShape);
+            Assertions.assertNull(retrievedShape);
 
         }
     }
