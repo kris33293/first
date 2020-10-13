@@ -76,7 +76,7 @@ public class WeatherForecast {
         {
             srednia = temperaturesList.get(temperaturesList.size()/2) + temperaturesList.get((temperaturesList.size()/2)-1);
 
-            mediana = srednia/2.0; //obliczamy średnią wartość dwóch elementów
+            mediana = srednia/2.0;
 
         }
         else mediana = temperaturesList.get(temperaturesList.size()/2);

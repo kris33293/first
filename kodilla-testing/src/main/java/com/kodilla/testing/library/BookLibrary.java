@@ -20,8 +20,8 @@ public class BookLibrary  {
     }
 
 
- //   public List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
-//
- //   } return
+    public List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
+
+    } return
 
 }
