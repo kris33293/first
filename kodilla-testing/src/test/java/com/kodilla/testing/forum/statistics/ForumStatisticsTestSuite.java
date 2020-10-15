@@ -39,23 +39,24 @@ public class ForumStatisticsTestSuite {
     class TestCalculateAdvStatistics {
 
         @Test
-        void testCalculateAdvStatisticsZeroZeroZero() {
+        void testCalculateAdvStatistics0Posts() {
             // Given
             ForumStatistics statisticsDatabase = new ForumStatistics(statisticsDatabaseMock);
-            List<User> zeroUsersList = new ArrayList<>();
-            int zero = 0;
+            List<User> zeroUsersList = generateListOfNUsers(100);
             when(statisticsDatabaseMock.usersNames()).thenReturn(zeroUsersList);
-            when(statisticsDatabaseMock.postsCount()).thenReturn(zero);
-            when(statisticsDatabaseMock.commentsCount()).thenReturn(zero);
+            when(statisticsDatabaseMock.postsCount()).thenReturn(0);
+            when(statisticsDatabaseMock.commentsCount()).thenReturn(100);
             // When
             statisticsDatabase.calculateAdvStatistics();
             double postsPerUser = statisticsDatabase.averagePostsPerUser;
             double commentsPerUser = statisticsDatabase.averageCommentsPerUser;
             double commentsPerPost = statisticsDatabase.averageCommentsPerPost;
+
             // Then
+            double f = Double.POSITIVE_INFINITY;
             assertEquals(0, postsPerUser);
-            assertEquals(0, commentsPerUser);
-            assertEquals(0, commentsPerPost);
+            assertEquals(1, commentsPerUser);
+            assertEquals(f, commentsPerPost);
         }
 
         @Test
@@ -150,6 +151,26 @@ public class ForumStatisticsTestSuite {
             // Then
             assertEquals(10, postsPerUser);
             assertEquals(100, commentsPerUser);
+            assertEquals(10, commentsPerPost);
+        }
+
+        @Test
+        void testCalculateAdvStatistics0users() {
+            // Given
+            ForumStatistics statisticsDatabase = new ForumStatistics(statisticsDatabaseMock);
+            List<User> zeroUsersList = new ArrayList<User>();
+            when(statisticsDatabaseMock.usersNames()).thenReturn(zeroUsersList);
+            when(statisticsDatabaseMock.postsCount()).thenReturn(1000);
+            when(statisticsDatabaseMock.commentsCount()).thenReturn(10000);
+            // When
+            statisticsDatabase.calculateAdvStatistics();
+            double postsPerUser = statisticsDatabase.averagePostsPerUser;
+            double commentsPerUser = statisticsDatabase.averageCommentsPerUser;
+            double commentsPerPost = statisticsDatabase.averageCommentsPerPost;
+            // Then
+            double f = Double.POSITIVE_INFINITY;
+            assertEquals(0, postsPerUser);
+            assertEquals(f, commentsPerUser);
             assertEquals(10, commentsPerPost);
         }
 
