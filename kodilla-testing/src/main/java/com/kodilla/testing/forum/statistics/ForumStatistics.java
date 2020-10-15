@@ -32,8 +32,12 @@ public class ForumStatistics {
     public double averagePostsPerUser() {
         double users = usersNames().size();
         double posts = postCount();
-        double averagePostsPerUser = posts / users;
-        return averagePostsPerUser;
+
+        if (users != 0) {
+            double averagePostsPerUser = posts / users;
+            return averagePostsPerUser;
+        } else return 0.0;
+
     }
 
     public double averageCommentsPerUser() {
@@ -52,7 +56,7 @@ public class ForumStatistics {
 
 
 
-    public void calculateAdvStatistics(Statistics statisticsDatabase) {
+    public void calculateAdvStatistics() {
         this.averageCommentsPerPost = averageCommentsPerPost();
         this.averageCommentsPerUser = averageCommentsPerUser();
         this.averagePostsPerUser = averagePostsPerUser();
