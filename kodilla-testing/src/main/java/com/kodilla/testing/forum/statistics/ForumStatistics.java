@@ -1,7 +1,9 @@
 package com.kodilla.testing.forum.statistics;
 
 
+
 import java.util.*;
+import java.lang.RuntimeException;
 
 public class ForumStatistics {
     private Statistics statisticsDatabase;
@@ -33,25 +35,40 @@ public class ForumStatistics {
         double users = usersNames().size();
         double posts = postCount();
 
-        if (users != 0) {
+        try {
             double averagePostsPerUser = posts / users;
             return averagePostsPerUser;
-        } else return 0.0;
+        } catch(ArithmeticException e) {
+            return 0;
+        }
+
 
     }
 
     public double averageCommentsPerUser() {
         double users = usersNames().size();
         double comments = commentsCount();
-        double averageCommentsPerUser = comments / users;
-        return averageCommentsPerUser;
+
+        try {
+            double averageCommentsPerUser = comments / users;
+            return averageCommentsPerUser;
+        } catch(ArithmeticException e) {
+            return 0;
+        }
+
+
     }
 
     public double averageCommentsPerPost() {
         double posts = postCount();
         double comments = commentsCount();
-        double averageCommentsPerPost = comments / posts;
-        return averageCommentsPerPost;
+        try {
+            double averageCommentsPerPost = comments / posts;
+            return averageCommentsPerPost;
+        } catch(ArithmeticException p) {
+            return 0;
+        }
+
     }
 
 

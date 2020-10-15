@@ -53,10 +53,10 @@ public class ForumStatisticsTestSuite {
             double commentsPerPost = statisticsDatabase.averageCommentsPerPost;
 
             // Then
-            double f = Double.POSITIVE_INFINITY;
+
             assertEquals(0, postsPerUser);
             assertEquals(1, commentsPerUser);
-            assertEquals(f, commentsPerPost);
+            assertEquals(0, commentsPerPost);
         }
 
         @Test
@@ -168,9 +168,9 @@ public class ForumStatisticsTestSuite {
             double commentsPerUser = statisticsDatabase.averageCommentsPerUser;
             double commentsPerPost = statisticsDatabase.averageCommentsPerPost;
             // Then
-            double f = Double.POSITIVE_INFINITY;
+
             assertEquals(0, postsPerUser);
-            assertEquals(f, commentsPerUser);
+            assertEquals(0, commentsPerUser);
             assertEquals(10, commentsPerPost);
         }
 
