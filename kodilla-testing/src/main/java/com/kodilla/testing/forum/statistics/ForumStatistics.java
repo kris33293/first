@@ -6,6 +6,8 @@ import java.util.*;
 public class ForumStatistics {
     private Statistics statisticsDatabase;
 
+    public double averageCommentsPerPost, averageCommentsPerUser, averagePostsPerUser;
+
     public ForumStatistics (Statistics statisticsDatabase){
         this.statisticsDatabase = statisticsDatabase;
     }
@@ -25,26 +27,26 @@ public class ForumStatistics {
         return commentsNumber;
     }
 
-    double averageCommentsPerPost, averageCommentsPerUser, averagePostsPerUser;
+
 
     public double averagePostsPerUser() {
         double users = usersNames().size();
         double posts = postCount();
-        averagePostsPerUser = posts / users;
+        double averagePostsPerUser = posts / users;
         return averagePostsPerUser;
     }
 
     public double averageCommentsPerUser() {
         double users = usersNames().size();
         double comments = commentsCount();
-        averageCommentsPerUser = comments / users;
+        double averageCommentsPerUser = comments / users;
         return averageCommentsPerUser;
     }
 
     public double averageCommentsPerPost() {
         double posts = postCount();
         double comments = commentsCount();
-        averageCommentsPerPost = comments / posts;
+        double averageCommentsPerPost = comments / posts;
         return averageCommentsPerPost;
     }
 

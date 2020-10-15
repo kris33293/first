@@ -37,11 +37,13 @@ public class ForumStatisticsTestSuite {
             when(statisticsDatabaseMock.commentsCount()).thenReturn(zero);
             // When
             statisticsDatabase.calculateAdvStatistics(statisticsDatabaseMock);
-            List <Double> zeroList = statisticsDatabase.showStatistics();
+            double postsPerUser = statisticsDatabase.averagePostsPerUser();
+            double commentsPerUser = statisticsDatabase.averageCommentsPerUser;
+            double commentsPerPost = statisticsDatabase.averageCommentsPerPost;
             // Then
-
-
-
+            assertEquals(0, postsPerUser);
+        //    assertEquals(x, commentsPerUser);
+         //   assertEquals(x, commentsPerPost);
 
 
 
