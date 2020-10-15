@@ -36,35 +36,47 @@ public class ForumStatistics {
         double posts = postCount();
 
         try {
-            double averagePostsPerUser = posts / users;
-            return averagePostsPerUser;
-        } catch(ArithmeticException e) {
+            if (users == 0) {
+                throw new ArithmeticException();
+            } else {
+                double averagePostsPerUser = posts / users;
+                return averagePostsPerUser;
+            }
+
+        } catch(ArithmeticException p) {
             return 0;
         }
-
 
     }
 
     public double averageCommentsPerUser() {
         double users = usersNames().size();
         double comments = commentsCount();
-
         try {
-            double averageCommentsPerUser = comments / users;
-            return averageCommentsPerUser;
-        } catch(ArithmeticException e) {
+            if (users == 0) {
+                throw new ArithmeticException();
+            } else {
+                double averageCommentsPerUser = comments / users;
+                return averageCommentsPerUser;
+            }
+
+        } catch(ArithmeticException p) {
             return 0;
         }
-
 
     }
 
     public double averageCommentsPerPost() {
         double posts = postCount();
         double comments = commentsCount();
-        try {
-            double averageCommentsPerPost = comments / posts;
-            return averageCommentsPerPost;
+            try {
+                if (posts == 0) {
+                    throw new ArithmeticException();
+                } else {
+                    double averageCommentsPerPost = comments / posts;
+                    return averageCommentsPerPost;
+                }
+
         } catch(ArithmeticException p) {
             return 0;
         }
