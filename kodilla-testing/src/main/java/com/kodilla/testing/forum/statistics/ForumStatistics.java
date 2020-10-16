@@ -72,12 +72,10 @@ public class ForumStatistics {
         this.averagePostsPerUser = averagePostsPerUser();
     }
 
-    public List<Double> showStatistics() {
-        List<Double> statisticsList = new ArrayList<>();
-        statisticsList.add(averageCommentsPerPost);
-        statisticsList.add(averageCommentsPerUser);
-        statisticsList.add(averagePostsPerUser);
-        return  statisticsList;
+    public void showStatistics() {
+        System.out.println(averagePostsPerUser);
+        System.out.println(averageCommentsPerUser);
+        System.out.println(averageCommentsPerPost);
     }
 
 
