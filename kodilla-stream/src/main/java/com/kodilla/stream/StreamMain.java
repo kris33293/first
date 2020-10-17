@@ -1,9 +1,9 @@
 package com.kodilla.stream;
 
-import com.kodilla.stream.beautifier.PoemDecorator;
+import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.reference.FunctionalCalculator;
-import com.kodilla.stream.reference.PoemBeautifer;
+import com.kodilla.stream.beautifier.PoemBeautifer;
 
 public class StreamMain {
     public static void main(String[] args) {
@@ -22,5 +22,8 @@ public class StreamMain {
 
         PoemBeautifer poemDecorator = new PoemBeautifer();
         poemDecorator.ExecuteBeautifer("tekst","drugi tekst", (a, b) -> a + b);
+
+        System.out.println("Using Stream to generate even numbers from 1 to 20");
+        NumbersGenerator.generateEven(20);
     }
 }
