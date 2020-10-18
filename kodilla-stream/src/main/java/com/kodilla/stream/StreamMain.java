@@ -14,7 +14,7 @@ public class StreamMain {
     public static void main(String[] args) {
         Forum theForum = new Forum();
 
-        LocalDate minAge = LocalDate.of(2000,10,17);
+        LocalDate minAge = LocalDate.now().minusYears(20);
 
         Map<Integer, ForumUser> userMap = theForum.getUserList().stream()
                 .filter(user-> user.getGender() == 'M')
