@@ -50,9 +50,9 @@ class ForumUserTestSuite {
         //      user7:  "Washington"
         //      user10: "Miami"
         assertEquals(3, user1.getLocationsOfFriends().size());
-        assertFalse(user3.getLocationsOfFriends().contains("Key West"));
-        assertFalse(user7.getLocationsOfFriends().contains("Washington"));
-        assertFalse(user10.getLocationsOfFriends().contains("Miami"));
+        assertFalse(user1.getLocationsOfFriends().contains("Key West"));
+        assertFalse(user1.getLocationsOfFriends().contains("Washington"));
+        assertFalse(user1.getLocationsOfFriends().contains("Miami"));
         assertFalse(user1.getLocationsOfFriends().contains("Orlando"));
     }
 
