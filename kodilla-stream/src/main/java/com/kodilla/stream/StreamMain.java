@@ -1,14 +1,13 @@
 package com.kodilla.stream;
 
 
+import com.kodilla.stream.array.ArrayOperations;
 import com.kodilla.stream.forumuser.Forum;
 import com.kodilla.stream.forumuser.ForumUser;
 
 import java.time.LocalDate;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class StreamMain {
     public static void main(String[] args) {
@@ -27,4 +26,8 @@ public class StreamMain {
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
     }
+
+
+
+
 }
