@@ -13,9 +13,9 @@ public class ArrayOperationsTestSuite {
         //Given
         int[] numbers = new int[5];
         //When
-        OptionalDouble average = ArrayOperations.getAverage(numbers);
+        Double average = ArrayOperations.getAverage(numbers);
         // Then
-        assertEquals(OptionalDouble.of(2), average);
+        assertEquals(2, average);
 
     }
 }
