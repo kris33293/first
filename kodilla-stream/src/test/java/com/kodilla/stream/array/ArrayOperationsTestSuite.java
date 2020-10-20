@@ -11,11 +11,11 @@ public class ArrayOperationsTestSuite {
     @Test
     void testGetAverage() {
         //Given
-        int[] numbers = new int[5];
+        int[] numbers = new int[] {1,1,1,1,1};
         //When
         Double average = ArrayOperations.getAverage(numbers);
         // Then
-        assertEquals(2, average);
+        assertEquals(1, average);
 
     }
 }

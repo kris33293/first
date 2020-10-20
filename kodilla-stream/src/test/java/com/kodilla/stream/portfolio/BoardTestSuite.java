@@ -83,17 +83,18 @@ class BoardTestSuite {
         Board project = prepareTestData();
 
         //When
-        List<Task> inProgressTasks = new ArrayList<>();
-        double average = project.getTaskLists().stream()
+        List<TaskList> inProgressTasks = new ArrayList<>();
+        inProgressTasks.add(new TaskList("In progress"));
+       double average = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
-                .filter( t -> t.getDeadline().isBefore(LocalDate.now()))
-                .mapToLong(a -> DAYS.between(a.getDeadline(),a.getCreated()))
+                .filter( t -> t.getCreated().isBefore(LocalDate.now()) || t.getCreated().isEqual(LocalDate.now()))
+                .mapToLong(a -> DAYS.between(a.getCreated(),LocalDate.now()))
                 .average()
                 .getAsDouble();
 
         //Then
-        assertEquals(2, average);
+        assertEquals(10, average, 0.01);
 
     }
 

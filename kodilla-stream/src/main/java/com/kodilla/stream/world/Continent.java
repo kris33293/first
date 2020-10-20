@@ -3,41 +3,34 @@ package com.kodilla.stream.world;
 import java.util.List;
 
 public class Continent {
+    public String name;
 
-    List<String> europeCountries;
-    List<String> africaCountries;
-    List<String> australiaCountries;
-    List<String> asiaCountries;
+    public Continent(String name) {
+        this.name = name;
+    }
 
-    public List<String> getEuropeCountries() {
-        europeCountries.add("Polska");
-        europeCountries.add("Niemcy");
-        europeCountries.add("Holandia");
-        europeCountries.add("Irlandia");
+    List<Country> europeCountries;
+    List<Country> africaCountries;
+    List<Country> australiaCountries;
+    List<Country> asiaCountries;
+
+    public void addEuropeCountry(Country name){
+        europeCountries.add(name);
+    }
+
+    public List<Country> getEuropeCountries() {
         return europeCountries;
     }
 
-    public List<String> getAfricaCountries() {
-        africaCountries.add("Kongo");
-        africaCountries.add("Tunezja");
-        africaCountries.add("Algieria");
-        africaCountries.add("Nigeria");
+    public List<Country> getAfricaCountries() {
         return africaCountries;
     }
 
-    public List<String> getAustraliaCountries() {
-        australiaCountries.add("Nowa Zelandia");
-        australiaCountries.add("Nauru");
-        australiaCountries.add("Papua-Nowa Gwinea");
-        australiaCountries.add("Palau");
+    public List<Country> getAustraliaCountries() {
         return australiaCountries;
     }
 
-    public List<String> getAsiaCountries() {
-        asiaCountries.add("Afganistan");
-        asiaCountries.add("Bangadesz");
-        asiaCountries.add("Pakistan");
-        asiaCountries.add("Kambodza");
+    public List<Country> getAsiaCountries() {
        return asiaCountries;
     }
 
