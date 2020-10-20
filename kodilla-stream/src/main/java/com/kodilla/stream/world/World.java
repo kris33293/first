@@ -8,9 +8,12 @@ public class World {
     List<Continent> continents = new ArrayList<>();
 
     public BigDecimal getPeopleQuantity(){
-        continents.stream();
-
-        return BigDecimal.ZERO;
+        Continent peopleQuantity = null;
+        BigDecimal total = BigDecimal.ZERO;
+                peopleQuantity.countries.stream()
+                .map(Country::getPopulation)
+                        .reduce(total, (sum, current) -> sum= sum.add(current));
+                return total;
     }
 
     public void addContinent(Continent name){

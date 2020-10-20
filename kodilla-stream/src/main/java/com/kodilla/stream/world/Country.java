@@ -5,17 +5,17 @@ import java.util.Objects;
 
 public class Country {
     public String name;
-    public int population;
+    public BigDecimal population;
 
     public String getName() {
         return name;
     }
 
-    public int getPopulation() {
+    public BigDecimal getPopulation() {
         return population;
     }
 
-    public Country(String name, int population) {
+    public Country(String name, BigDecimal population) {
         this.name = name;
         this.population = population;
     }
