@@ -9,12 +9,11 @@ public class World {
 
 
     public BigDecimal getPeopleQuantity(){
-        Continent continent = null;
-        BigDecimal total = BigDecimal.ZERO;
-                getContinents().stream()
+        BigDecimal total = getContinents().stream()
                 .flatMap(continents -> continents.getCountries().stream())
                 .map(Country::getPopulation)
-                .reduce(total, (sum, current) -> sum= sum.add(current));
+                //     .forEach(System.out::println)
+                .reduce(BigDecimal.ZERO, (sum, population) -> sum= sum.add(population));
 
         return total;
     }
