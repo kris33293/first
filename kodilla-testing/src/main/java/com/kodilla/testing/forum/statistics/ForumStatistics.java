@@ -1,7 +1,6 @@
 package com.kodilla.testing.forum.statistics;
 
 
-
 import java.util.*;
 import java.lang.RuntimeException;
 
@@ -10,7 +9,7 @@ public class ForumStatistics {
 
     public double averageCommentsPerPost, averageCommentsPerUser, averagePostsPerUser;
 
-    public ForumStatistics (Statistics statisticsDatabase){
+    public ForumStatistics(Statistics statisticsDatabase) {
         this.statisticsDatabase = statisticsDatabase;
     }
 
@@ -30,15 +29,14 @@ public class ForumStatistics {
     }
 
 
-
     public double averagePostsPerUser() {
         double users = usersNames().size();
         double posts = postCount();
 
-            if (users != 0) {
-                double averagePostsPerUser = posts / users;
-                return averagePostsPerUser;
-            } else return 0;
+        if (users != 0) {
+            double averagePostsPerUser = posts / users;
+            return averagePostsPerUser;
+        } else return 0;
 
 
     }
@@ -46,10 +44,10 @@ public class ForumStatistics {
     public double averageCommentsPerUser() {
         double users = usersNames().size();
         double comments = commentsCount();
-            if (users != 0) {
-                double averageCommentsPerUser = comments / users;
-                return averageCommentsPerUser;
-            } else return 0;
+        if (users != 0) {
+            double averageCommentsPerUser = comments / users;
+            return averageCommentsPerUser;
+        } else return 0;
 
 
     }
@@ -57,13 +55,12 @@ public class ForumStatistics {
     public double averageCommentsPerPost() {
         double posts = postCount();
         double comments = commentsCount();
-                if (posts != 0) {
-                    double averageCommentsPerPost = comments / posts;
-                    return averageCommentsPerPost;
-                } else return 0;
+        if (posts != 0) {
+            double averageCommentsPerPost = comments / posts;
+            return averageCommentsPerPost;
+        } else return 0;
 
     }
-
 
 
     public void calculateAdvStatistics() {

@@ -10,10 +10,11 @@ public class OddNumbersExterminator {
 
     public List<Integer> exterminate(List<Integer> numbersList) {
 
-        for (Integer numbers : numbersList){
-            if (numbers % 2 == 0){
+        for (Integer numbers : numbersList) {
+            if (numbers % 2 == 0) {
                 afterExtermination.add(numbers);
             }
-        } return afterExtermination;
+        }
+        return afterExtermination;
     }
 }

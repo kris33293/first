@@ -19,7 +19,7 @@ class WeatherForecastTestSuite {
     private Temperatures temperaturesMock;
 
     @BeforeEach
-    public void before(){
+    public void before() {
         Map<String, Double> temperaturesMap = new HashMap<>();
         temperaturesMap.put("Rzeszow", 25.5);
         temperaturesMap.put("Krakow", 26.2);

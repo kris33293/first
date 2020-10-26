@@ -1,4 +1,3 @@
-rootProject.name = 'kodilla-course'
-include 'kodilla-testing'
-include 'kodilla-stream'
+rootProject.name = 'kodilla-exception'
+include 'kodilla-exception'
 

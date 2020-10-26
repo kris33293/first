@@ -2,7 +2,7 @@ package com.kodilla.testing.library;
 
 import java.util.*;
 
-public class BookLibrary  {
+public class BookLibrary {
     private LibraryDatabase libraryDatabase;
 
     public BookLibrary(LibraryDatabase libraryDatabase) {

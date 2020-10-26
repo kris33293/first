@@ -8,20 +8,18 @@ public class World {
     List<Continent> continents = new ArrayList<>();
 
 
-    public BigDecimal getPeopleQuantity(){
+    public BigDecimal getPeopleQuantity() {
         BigDecimal total = getContinents().stream()
                 .flatMap(continents -> continents.getCountries().stream())
                 .map(Country::getPopulation)
                 //     .forEach(System.out::println)
-                .reduce(BigDecimal.ZERO, (sum, population) -> sum= sum.add(population));
+                .reduce(BigDecimal.ZERO, (sum, population) -> sum = sum.add(population));
 
         return total;
     }
 
 
-
-
-    public void addContinent(Continent name){
+    public void addContinent(Continent name) {
         continents.add(name);
     }
 
@@ -30,7 +28,6 @@ public class World {
         return continents;
 
     }
-
 
 
 }

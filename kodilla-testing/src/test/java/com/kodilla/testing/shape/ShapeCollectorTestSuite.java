@@ -11,12 +11,12 @@ import java.util.List;
 public class ShapeCollectorTestSuite {
 
     @BeforeEach
-    public void before(){
+    public void before() {
         System.out.println("Test Case: begin");
     }
 
     @AfterEach
-    public void after(){
+    public void after() {
         System.out.println("Test Case: end");
     }
 
@@ -39,7 +39,7 @@ public class ShapeCollectorTestSuite {
         void testAddFigure() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Circle circle = new Circle("circle", 25 );
+            Circle circle = new Circle("circle", 25);
             // When
             shapeCollector.addFigure(circle);
             // Then
@@ -52,7 +52,7 @@ public class ShapeCollectorTestSuite {
         void testRemoveFigure() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Circle circle = new Circle("circle", 25 );
+            Circle circle = new Circle("circle", 25);
             // When
             boolean result = shapeCollector.removeFigure(circle);
             // Then
@@ -66,7 +66,7 @@ public class ShapeCollectorTestSuite {
         void testGetFigure() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Circle circle = new Circle("circle", 25 );
+            Circle circle = new Circle("circle", 25);
             shapeCollector.addFigure(circle);
             // When
             Shape retrievedShape;
@@ -80,7 +80,7 @@ public class ShapeCollectorTestSuite {
         void testGetFigureNegativeIndex() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Square square = new Square("square", 25 );
+            Square square = new Square("square", 25);
             shapeCollector.addFigure(square);
             // When
             Shape retrievedShape;
@@ -94,7 +94,7 @@ public class ShapeCollectorTestSuite {
         void testGetFigureOverloadedIndex() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Square square = new Square("square", 25 );
+            Square square = new Square("square", 25);
             shapeCollector.addFigure(square);
             // When
             Shape retrievedShape;
@@ -114,12 +114,11 @@ public class ShapeCollectorTestSuite {
         void testAddFigure() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Square square = new Square("square", 25 );
+            Square square = new Square("square", 25);
             // When
             shapeCollector.addFigure(square);
             // Then
             Assertions.assertEquals(1, shapeCollector.getFiguresQuantity());
-
 
 
         }
@@ -128,13 +127,12 @@ public class ShapeCollectorTestSuite {
         void testRemoveFigure() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Square square = new Square("square", 25 );
+            Square square = new Square("square", 25);
             // When
             boolean result = shapeCollector.removeFigure(square);
             // Then
             Assertions.assertTrue(result);
             Assertions.assertEquals(0, shapeCollector.getFiguresQuantity());
-
 
 
         }
@@ -143,7 +141,7 @@ public class ShapeCollectorTestSuite {
         void testGetFigure() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Square square = new Square("square", 25 );
+            Square square = new Square("square", 25);
             shapeCollector.addFigure(square);
             // When
             Shape retrievedShape;
@@ -157,7 +155,7 @@ public class ShapeCollectorTestSuite {
         void testGetFigureNegativeIndex() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Square square = new Square("square", 25 );
+            Square square = new Square("square", 25);
             shapeCollector.addFigure(square);
             // When
             Shape retrievedShape;
@@ -171,7 +169,7 @@ public class ShapeCollectorTestSuite {
         void testGetFigureOverloadedIndex() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Square square = new Square("square", 25 );
+            Square square = new Square("square", 25);
             shapeCollector.addFigure(square);
             // When
             Shape retrievedShape;
@@ -184,19 +182,18 @@ public class ShapeCollectorTestSuite {
 
     @Nested
     @DisplayName("Test for triangle")
-    class TestTriangle{
+    class TestTriangle {
 
 
         @Test
         void testAddFigure() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Triangle triangle = new Triangle("triangle", 25 );
+            Triangle triangle = new Triangle("triangle", 25);
             // When
             shapeCollector.addFigure(triangle);
             // Then
             Assertions.assertEquals(1, shapeCollector.getFiguresQuantity());
-
 
 
         }
@@ -205,13 +202,12 @@ public class ShapeCollectorTestSuite {
         void testRemoveFigure() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Triangle triangle = new Triangle("triangle", 25 );
+            Triangle triangle = new Triangle("triangle", 25);
             // When
             boolean result = shapeCollector.removeFigure(triangle);
             // Then
             Assertions.assertTrue(result);
             Assertions.assertEquals(0, shapeCollector.getFiguresQuantity());
-
 
 
         }
@@ -220,7 +216,7 @@ public class ShapeCollectorTestSuite {
         void testGetFigure(int n) {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Triangle triangle = new Triangle("triangle", 25 );
+            Triangle triangle = new Triangle("triangle", 25);
             shapeCollector.addFigure(triangle);
             // When
             Shape retrievedShape;
@@ -234,7 +230,7 @@ public class ShapeCollectorTestSuite {
         void testGetFigureNegativeIndex() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Square square = new Square("square", 25 );
+            Square square = new Square("square", 25);
             shapeCollector.addFigure(square);
             // When
             Shape retrievedShape;
@@ -248,7 +244,7 @@ public class ShapeCollectorTestSuite {
         void testGetFigureOverloadedIndex() {
             // Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Square square = new Square("square", 25 );
+            Square square = new Square("square", 25);
             shapeCollector.addFigure(square);
             // When
             Shape retrievedShape;
@@ -263,11 +259,11 @@ public class ShapeCollectorTestSuite {
     void testShowFigures() {
         // Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Triangle triangle = new Triangle("triangle", 12 );
+        Triangle triangle = new Triangle("triangle", 12);
         shapeCollector.addFigure(triangle);
-        Square square = new Square("square", 25 );
+        Square square = new Square("square", 25);
         shapeCollector.addFigure(square);
-        Circle circle = new Circle("circle", 25 );
+        Circle circle = new Circle("circle", 25);
         shapeCollector.addFigure(circle);
         // When
         List<Shape> retrievedShapes = new ArrayList<>();

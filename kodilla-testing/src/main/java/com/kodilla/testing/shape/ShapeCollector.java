@@ -8,22 +8,23 @@ public class ShapeCollector {
     private List<Shape> shapesList = new ArrayList<>();
 
 
-    public int getFiguresQuantity () {
+    public int getFiguresQuantity() {
         return shapesList.size();
     }
-    public void addFigure(Shape shape){
+
+    public void addFigure(Shape shape) {
 
     }
 
-    public  boolean removeFigure(Shape shape){
+    public boolean removeFigure(Shape shape) {
         return true;
     }
 
-    public Shape getFigure(Integer n){
+    public Shape getFigure(Integer n) {
         return null;
     }
 
-    public ArrayList<Shape> showFigures(){
+    public ArrayList<Shape> showFigures() {
         return null;
     }
 

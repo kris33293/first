@@ -34,32 +34,31 @@ public class CollectionTestSuite {
         OddNumbersExterminator extermination = new OddNumbersExterminator();
 
 
-
-            //Then
-
-
-            Assertions.assertEquals(extermination.exterminate(numbersList), checkNumbersList);
-
-        }
-
-        @DisplayName("when create empty numbersList, " +
-                "then method exterminate returns empty list"
-        )
-        @Test
-        void testOddNumbersExterminatorEmptyList() {
-            //Given
-            List<Integer> numbersList = new ArrayList<>();
-            List<Integer> checkNumbersList = new ArrayList<>();
+        //Then
 
 
-            //When
-            OddNumbersExterminator extermination = new OddNumbersExterminator();
+        Assertions.assertEquals(extermination.exterminate(numbersList), checkNumbersList);
 
-            //Then
-
-            Assertions.assertEquals(extermination.exterminate(numbersList), checkNumbersList);
-
-        }
     }
+
+    @DisplayName("when create empty numbersList, " +
+            "then method exterminate returns empty list"
+    )
+    @Test
+    void testOddNumbersExterminatorEmptyList() {
+        //Given
+        List<Integer> numbersList = new ArrayList<>();
+        List<Integer> checkNumbersList = new ArrayList<>();
+
+
+        //When
+        OddNumbersExterminator extermination = new OddNumbersExterminator();
+
+        //Then
+
+        Assertions.assertEquals(extermination.exterminate(numbersList), checkNumbersList);
+
+    }
+}
 
 

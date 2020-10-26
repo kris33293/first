@@ -8,12 +8,12 @@ import org.junit.jupiter.api.*;
 class ForumTestSuite {
 
     @BeforeEach
-    public void before(){
+    public void before() {
         System.out.println("Test Case: begin");
     }
 
     @AfterEach
-    public void after(){
+    public void after() {
         System.out.println("Test Case: end");
     }
 
@@ -31,7 +31,7 @@ class ForumTestSuite {
             "then getRealName should return real user name"
     )
     @Test
-    void testCaseRealName(){
+    void testCaseRealName() {
         //Given
         SimpleUser simpleUser = new SimpleUser("theForumUser", "John Smith");
         //When
@@ -43,7 +43,7 @@ class ForumTestSuite {
 
     @DisplayName(
             "When created SimpleUser with name, " +
-            "then getUsername should return correct name"
+                    "then getUsername should return correct name"
     )
     @Test
     void testCaseUsername() {

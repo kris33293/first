@@ -16,7 +16,7 @@ public class StreamMain {
         LocalDate minAge = LocalDate.now().minusYears(20);
 
         Map<Integer, ForumUser> userMap = theForum.getUserList().stream()
-                .filter(user-> user.getGender() == 'M')
+                .filter(user -> user.getGender() == 'M')
                 .filter(user -> user.getBirthDate().isBefore(minAge))
                 .filter(user -> user.getPosts() > 0)
                 .collect(Collectors.toMap(ForumUser::getUserId, user -> user));
@@ -26,8 +26,6 @@ public class StreamMain {
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
     }
-
-
 
 
 }

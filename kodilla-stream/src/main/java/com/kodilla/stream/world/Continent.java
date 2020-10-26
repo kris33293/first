@@ -12,12 +12,13 @@ public class Continent {
 
 
     List<Country> countries = new ArrayList<>();
-    public void addCountry(Country name){
+
+    public void addCountry(Country name) {
         countries.add(name);
     }
 
     public List<Country> getCountries() {
-       return countries;
+        return countries;
     }
 
 }

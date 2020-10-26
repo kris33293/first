@@ -11,7 +11,7 @@ public class ArrayOperationsTestSuite {
     @Test
     void testGetAverage() {
         //Given
-        int[] numbers = new int[] {1,1,1,1,1};
+        int[] numbers = new int[]{1, 1, 1, 1, 1};
         //When
         Double average = ArrayOperations.getAverage(numbers);
         // Then

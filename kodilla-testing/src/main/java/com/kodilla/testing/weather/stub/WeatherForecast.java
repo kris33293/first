@@ -6,7 +6,7 @@ import java.util.*;
 public class WeatherForecast {
     private Temperatures temperatures;
 
-    public WeatherForecast(Temperatures temperatures){
+    public WeatherForecast(Temperatures temperatures) {
         this.temperatures = temperatures;
     }
 
@@ -14,7 +14,7 @@ public class WeatherForecast {
         Map<String, Double> resultMap = new HashMap<>();
 
         for (Map.Entry<String, Double> temperature :
-                temperatures.getTemperatures().entrySet()){
+                temperatures.getTemperatures().entrySet()) {
 
             // adding 1 celsius degree to current value
             // as a temporary weather forecast
@@ -28,14 +28,14 @@ public class WeatherForecast {
         List<Double> temperaturesList = new ArrayList<>();
 
         for (Map.Entry<String, Double> temperature :
-                temperatures.getTemperatures().entrySet()){
+                temperatures.getTemperatures().entrySet()) {
 
 
             resultMap.put(temperature.getKey(), temperature.getValue());
         }
 
         for (Map.Entry<String, Double> temperature :
-                resultMap.entrySet()){
+                resultMap.entrySet()) {
 
 
             temperaturesList.add(temperature.getValue());
@@ -43,11 +43,11 @@ public class WeatherForecast {
 
         int n = temperaturesList.size();
         double averageTemp = 0;
-        for (int i=0; i<n; i++){
+        for (int i = 0; i < n; i++) {
             averageTemp = averageTemp + temperaturesList.get(i);
         }
 
-        return (averageTemp / n );
+        return (averageTemp / n);
     }
 
     public double calculateMedianTemperature() {
@@ -57,14 +57,14 @@ public class WeatherForecast {
         double srednia = 0;
 
         for (Map.Entry<String, Double> temperature :
-                temperatures.getTemperatures().entrySet()){
+                temperatures.getTemperatures().entrySet()) {
 
 
             resultMap.put(temperature.getKey(), temperature.getValue());
         }
 
         for (Map.Entry<String, Double> temperature :
-                resultMap.entrySet()){
+                resultMap.entrySet()) {
 
 
             temperaturesList.add(temperature.getValue());
@@ -72,14 +72,12 @@ public class WeatherForecast {
 
         Collections.sort(temperaturesList);
 
-        if (temperaturesList.size() % 2 == 0 )
-        {
-            srednia = temperaturesList.get(temperaturesList.size()/2) + temperaturesList.get((temperaturesList.size()/2)-1);
+        if (temperaturesList.size() % 2 == 0) {
+            srednia = temperaturesList.get(temperaturesList.size() / 2) + temperaturesList.get((temperaturesList.size() / 2) - 1);
 
-            mediana = srednia/2.0;
+            mediana = srednia / 2.0;
 
-        }
-        else mediana = temperaturesList.get(temperaturesList.size()/2);
+        } else mediana = temperaturesList.get(temperaturesList.size() / 2);
 
         return mediana;
     }
