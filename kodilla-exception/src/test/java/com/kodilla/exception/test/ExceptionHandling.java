@@ -1,14 +1,7 @@
 package com.kodilla.exception.test;
 
 
-
-import com.kodilla.exception.io.FileReader;
-import com.kodilla.exception.io.FileReaderException;
 import org.junit.jupiter.api.Test;
-
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
