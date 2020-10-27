@@ -30,7 +30,7 @@ public class FlightFinder {
         try {
             flight.findFlight(searchedFlight);
         } catch (Exception e) {
-            System.out.println("Zle dane!");
+            System.out.println("Wyszukiwany lot nie istnieje!");
         }
     }
 }
