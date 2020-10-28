@@ -48,8 +48,8 @@ public class Main {
                 .collect(Collectors.toList());
 
         List<Integer> result = number.stream()
-                .map(n -> n * n);
-
+                .map(n -> n * n)
+                .collect(Collectors.toList());
 
         return result;
     }

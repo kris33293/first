@@ -1,14 +1,18 @@
 package com.kodilla.exception.test;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toList;
 
 public class FlightFinder {
 
     public HashMap<String, Boolean> FlightMap() {
         HashMap<String, Boolean> flightsMap = new HashMap<>();
         flightsMap.put("Amsterdam", Boolean.TRUE);
-        flightsMap.put("Berlin", Boolean.TRUE);
+        flightsMap.put("Berlin", Boolean.FALSE);
         flightsMap.put("Poznan", Boolean.FALSE);
         flightsMap.put("Dublin", Boolean.TRUE);
         flightsMap.put("Tokio", Boolean.FALSE);
@@ -19,9 +23,11 @@ public class FlightFinder {
 
     public void findFlight(Flight flight) throws Exception {
 
-        if (FlightMap().containsKey(flight.getArrivalAirport()) & FlightMap().containsValue(Boolean.TRUE)) {
-            System.out.println("Wyszukiwany Lot Istnieje");
-        } else throw new RouteNotFoundException();
+        for (Map.Entry<String, Boolean> flights : FlightMap().entrySet()) {
+            if (flights.getKey().equals(flight.getArrivalAirport()) & flights.getValue().equals(Boolean.TRUE)) {
+                System.out.println("Wyszukiwany Lot Istnieje");
+            } else throw new RouteNotFoundException();
+        }
     }
 
     public static void main(String[] args) {
