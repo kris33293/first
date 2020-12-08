@@ -1,3 +1,4 @@
 rootProject.name = 'kodilla-exception'
 include 'kodilla-exception'
+include 'kodilla-good-patterns'
 
