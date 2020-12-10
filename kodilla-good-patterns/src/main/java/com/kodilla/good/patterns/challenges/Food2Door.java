@@ -1,6 +1,6 @@
 package com.kodilla.good.patterns.challenges;
 
-public class ProductOrderService {
+public class Food2Door {
 
     public void process(OrderRequest orderRequest) {
         System.out.println("Zamowienie od " + orderRequest.getName());
@@ -25,7 +25,7 @@ public class ProductOrderService {
         OrderRequest hS = new OrderRequest(healthyShop,"salatki",250);
         OrderRequest gFS = new OrderRequest(glutenFreeShop,"ciastka", 550);
 
-        ProductOrderService makeOrder = new ProductOrderService();
+        Food2Door makeOrder = new Food2Door();
 
         makeOrder.process(eFS);
         makeOrder.process(hS);
