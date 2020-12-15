@@ -1,26 +1,35 @@
 package com.kodilla.good.patterns.challenges;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class FlightsMap {
 
-    private static HashMap<String,String> listOfFlights = new HashMap<>();
+    private static HashMap<String,List> listOfFlights = new HashMap<>();
 
-    public HashMap<String,String> FlightsMap(){
+    public HashMap<String, List> FlightsMap(){
 
-        listOfFlights.put("Krakow","Poznan");
-        listOfFlights.put("Krakow","Warszawa");
-        listOfFlights.put("Krakow","Szczecin");
-        listOfFlights.put("Szczecin","Poznan");
-        listOfFlights.put("Szczecin","Krakow");
-        listOfFlights.put("Poznan","Szczecin");
-        listOfFlights.put("Poznan","Rzeszow");
-        listOfFlights.put("Poznan","Bydgoszcz");
-        listOfFlights.put("Poznan","Gdynia");
-        listOfFlights.put("Poznan","Berlin");
-        listOfFlights.put("Gdynia","Rzeszow");
-        listOfFlights.put("Berlin","Dublin");
+        List<String> krakowFlights = new ArrayList<>();
+        krakowFlights.add("Poznan");
+        krakowFlights.add("Warszawa");
+        krakowFlights.add("Szczecin");
+
+        List<String> szczecinFlights = new ArrayList<>();
+        szczecinFlights.add("Poznan");
+        szczecinFlights.add("Krakow");
+
+        List<String> poznanFlights = new ArrayList<>();
+        poznanFlights.add("Rzeszow");
+        poznanFlights.add("Berlin");
+        poznanFlights.add("Szczecin");
+        poznanFlights.add("Gdynia");
+        poznanFlights.add("Bydgoszcz");
+
+        listOfFlights.put("Krakow",krakowFlights);
+        listOfFlights.put("Szczecin",szczecinFlights);
+        listOfFlights.put("Poznan", poznanFlights);
         return listOfFlights;
     }
 
