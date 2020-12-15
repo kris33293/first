@@ -31,10 +31,13 @@ public class FlightService {
 
         FlightsMap map = new FlightsMap();
 
-        HashMap<String, List> listOfFlights = map.FlightsMap().entrySet().stream()
-                .filter(s -> s.getKey().equals(by))
 
-                .collect(toString());
+
+        map.FlightsMap().entrySet().stream()
+                .filter(s -> s.getKey().equals(destination))
+                .filter(f -> f.getValue().contains(by))
+                .forEach(System.out::println);
+
     }
 
 }
@@ -44,10 +47,9 @@ class FService {
     public static void main(String[] args) {
 
         FlightService flights = new FlightService();
-
-
         flights.flightsOut("Krakow");
         flights.flightsIn("Poznan");
+        flights.flightsBy("Krakow","Szczecin");
     }
 
 }
