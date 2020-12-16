@@ -2,21 +2,24 @@ package com.kodilla.good.patterns.challenges;
 
 public class Flight {
 
-    public static StartAirport startAirport;
-    public static DepartureAirport departureAirport;
+    private StartAirport startAirport;
+    private DepartureAirport departureAirport;
 
     public Flight(StartAirport startAirport, DepartureAirport departureAirport) {
-        Flight.startAirport = startAirport;
+        this.startAirport = startAirport;
         this.departureAirport = departureAirport;
     }
 
-    public StartAirport getStartAirport() {
-        return startAirport;
+
+    public String getStartAirport() {
+        return startAirport.getName();
     }
 
-    public DepartureAirport getDepartureAirport() {
-        return departureAirport;
+    public String getDepartureAirport() {
+        return departureAirport.getName();
     }
+
+
 
     @Override
     public String toString() {

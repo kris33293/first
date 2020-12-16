@@ -13,7 +13,7 @@ public class FlightService {
 
 
         map.FlightsMap().stream()
-                .filter(s -> s.departureAirport.getName().equals(destination))
+                .filter(s -> s.getDepartureAirport().equals(destination))
                 .forEach(System.out::println);
 
     }
@@ -23,7 +23,7 @@ public class FlightService {
         FlightsMap map = new FlightsMap();
 
         map.FlightsMap().stream()
-                .filter(s -> s.startAirport.getName().equals(start))
+                .filter(s -> s.getStartAirport().equals(start))
                 .forEach(System.out::println);
 
     }
@@ -34,8 +34,8 @@ public class FlightService {
 
 
         map.FlightsMap().stream()
-                .filter(s -> s.departureAirport.getName().equals(destination))
-                .filter(f -> f.startAirport.getName().equals(by))
+                .filter(s -> s.getDepartureAirport().equals(destination))
+                .filter(f -> f.getStartAirport().equals(by))
                 .forEach(System.out::println);
 
     }
