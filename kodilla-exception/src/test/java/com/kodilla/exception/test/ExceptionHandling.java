@@ -12,7 +12,7 @@ public class ExceptionHandling {
         SecondChallenge second = new SecondChallenge();
 
         try {
-            second.probablyIWillThrowException(2.0,0.5);
+            second.probablyIWillThrowException(2.0, 0.5);
         } catch (Exception e) {
             System.out.println("Zle dane!");
         }
@@ -30,7 +30,7 @@ class FileReaderTestSuite {
         SecondChallenge second = new SecondChallenge();
         // when & then
         assertAll(
-                () -> assertThrows(SecondChallengeException.class, () -> second.probablyIWillThrowException(2.0,1.5)));
+                () -> assertThrows(SecondChallengeException.class, () -> second.probablyIWillThrowException(2.0, 1.5)));
     }
 }
 

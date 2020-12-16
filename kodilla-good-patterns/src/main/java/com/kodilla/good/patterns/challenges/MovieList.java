@@ -8,12 +8,12 @@ import java.util.stream.Collectors;
 class MovieList {
 
     public static void main(String[] args) {
-            MovieStore movies = new MovieStore();
-            String result = movies.getMovies().values().stream()
-                    .map(Objects::toString)
-                    .collect(Collectors.joining(","));
+        MovieStore movies = new MovieStore();
+        String result = movies.getMovies().values().stream()
+                .map(Objects::toString)
+                .collect(Collectors.joining(","));
 
-            System.out.println(result);
+        System.out.println(result);
 
     }
 

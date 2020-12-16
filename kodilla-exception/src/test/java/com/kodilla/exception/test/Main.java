@@ -72,7 +72,7 @@ public class Main {
 
     public static Integer getAverageJava8(List<Integer> numbers) {
         int sum = 0;
-        for (int i=0; i< numbers.size(); i++) {
+        for (int i = 0; i < numbers.size(); i++) {
             sum += i;
         }
         return sum / numbers.size();

@@ -24,15 +24,15 @@ public class FlightFinder {
     public void findFlight(Flight flight) throws Exception {
 
 
-            if (FlightMap().containsKey(flight.getArrivalAirport()) & FlightMap().get(flight.getArrivalAirport()) ) {
-                System.out.println("Wyszukiwany Lot Istnieje");
-            } else throw new RouteNotFoundException();
-        }
+        if (FlightMap().containsKey(flight.getArrivalAirport()) & FlightMap().get(flight.getArrivalAirport())) {
+            System.out.println("Wyszukiwany Lot Istnieje");
+        } else throw new RouteNotFoundException();
+    }
 
 
     public static void main(String[] args) {
         FlightFinder flight = new FlightFinder();
-        Flight searchedFlight = new Flight("Oslo","Dublin");
+        Flight searchedFlight = new Flight("Oslo", "Dublin");
         try {
             flight.findFlight(searchedFlight);
         } catch (Exception e) {

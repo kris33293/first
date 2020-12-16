@@ -1,10 +1,10 @@
 package com.kodilla.good.patterns.challenges;
 
-public class Supplier {
+public class StartAirport {
 
     private String name;
 
-    public Supplier(String name) {
+    public StartAirport(String name) {
         this.name = name;
     }
 
@@ -14,6 +14,8 @@ public class Supplier {
 
     @Override
     public String toString() {
-        return name;
+        return "StartAirport{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }

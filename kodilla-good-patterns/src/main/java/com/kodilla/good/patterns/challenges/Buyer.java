@@ -4,8 +4,8 @@ public class Buyer {
     private String name, address;
 
 
-    public Buyer (final String name,
-                    final String address) {
+    public Buyer(final String name,
+                 final String address) {
         this.name = name;
         this.address = address;
 
@@ -13,6 +13,6 @@ public class Buyer {
 
     @Override
     public String toString() {
-        return "Buyer : " + name + " ,"  + address ;
+        return "Buyer : " + name + " ," + address;
     }
 }

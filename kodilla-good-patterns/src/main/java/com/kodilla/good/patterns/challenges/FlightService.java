@@ -7,35 +7,35 @@ import java.util.stream.Collectors;
 
 public class FlightService {
 
-    public void flightsIn(String destination){
+    public void flightsIn(String destination) {
 
         FlightsMap map = new FlightsMap();
 
-        map.FlightsMap().entrySet().stream()
-                .filter(s -> s.getValue().contains(destination))
+
+        map.FlightsMap().stream()
+                .filter(s -> s.departureAirport.getName().equals(destination))
                 .forEach(System.out::println);
 
     }
 
-    public void flightsOut(String start){
+    public void flightsOut(String start) {
 
         FlightsMap map = new FlightsMap();
 
-        map.FlightsMap().entrySet().stream()
-                .filter(s -> s.getKey().equals(start))
+        map.FlightsMap().stream()
+                .filter(s -> s.startAirport.getName().equals(start))
                 .forEach(System.out::println);
 
     }
 
-    public void flightsBy(String destination, String by){
+    public void flightsBy(String destination, String by) {
 
         FlightsMap map = new FlightsMap();
 
 
-
-        map.FlightsMap().entrySet().stream()
-                .filter(s -> s.getKey().equals(destination))
-                .filter(f -> f.getValue().contains(by))
+        map.FlightsMap().stream()
+                .filter(s -> s.departureAirport.getName().equals(destination))
+                .filter(f -> f.startAirport.getName().equals(by))
                 .forEach(System.out::println);
 
     }
@@ -47,9 +47,11 @@ class FService {
     public static void main(String[] args) {
 
         FlightService flights = new FlightService();
-        flights.flightsOut("Krakow");
+        flights.flightsOut("Poznan");
+        System.out.println();
         flights.flightsIn("Poznan");
-        flights.flightsBy("Krakow","Szczecin");
+        System.out.println();
+        flights.flightsBy("Berlin", "Krakow");
     }
 
 }
