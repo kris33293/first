@@ -2,11 +2,11 @@ package com.kodilla.good.patterns.challenges;
 
 public class Flight {
 
-    StartAirport startAirport;
-    DepartureAirport departureAirport;
+    public static StartAirport startAirport;
+    public static DepartureAirport departureAirport;
 
     public Flight(StartAirport startAirport, DepartureAirport departureAirport) {
-        this.startAirport = startAirport;
+        Flight.startAirport = startAirport;
         this.departureAirport = departureAirport;
     }
 
