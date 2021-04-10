@@ -24,8 +24,8 @@ create table kodilla_course.readers_aud
     NEW_FIRSTNAME varchar(255) null,
     OLD_LASTNAME  varchar(255) null,
     NEW_LASTNAME  varchar(255) null,
-    OLD_PESELID   int          null,
-    NEW_PESELID   int          null,
+    OLD_PESELID   varchar(11)  null,
+    NEW_PESELID   varchar(11)  null,
     OLD_VIP_LEVEL varchar(255) null,
     NEW_VIP_LEVEL varchar(255) null
 );
